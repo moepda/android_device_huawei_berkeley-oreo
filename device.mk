@@ -99,6 +99,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/releasetools/releasetools.kirin970.sh:install/bin/releasetools.kirin970.sh
 
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-huawei
+
+PRODUCT_BOOT_JARS += \
+    telephony-huawei
+
 # VNDK
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vndk-compat/vndk-detect:system/bin/vndk-detect \
