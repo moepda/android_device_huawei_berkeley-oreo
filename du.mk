@@ -24,3 +24,7 @@ PRODUCT_BRAND := Huawei
 PRODUCT_MODEL := Honor View 10
 
 BUILD_FINGERPRINT := kirin970/kirin970/kirin970:8.1.0/OPM1.171019.011/jslave01241654:user/test-keys
+
+# Security patch level override
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.override.security_patch=$(PLATFORM_SECURITY_PATCH)
