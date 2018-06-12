@@ -19,6 +19,10 @@ on property:sys.fpnav.enabled=1
     stop fps_hal_ext
     start fps_hal_ext
 
+on post-fs-data
+    # default country code
+    setprop ro.boot.wificountrycode 00
+
 service hisupl_service /vendor/bin/hw/vendor.huawei.hardware.hisupl@1.0-service
     class hal
     user system
