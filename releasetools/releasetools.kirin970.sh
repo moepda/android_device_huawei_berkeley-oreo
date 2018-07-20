@@ -33,6 +33,14 @@ if [ "$(grep ro.build.version.release /vendor/build.prop)" = "ro.build.version.r
     echo "(roletype object_r displayengine_hwservice)" >> /system/etc/selinux/plat_sepolicy.cil
     echo "(typeattributeset displayengine_hwservice_26_0 (displayengine_hwservice))" >> /system/etc/selinux/mapping/26.0.cil
 
+    # Add mapping for font and theme
+    echo "(expandtypeattribute (dufont_service_26_0) true)" >> /system/etc/selinux/mapping/26.0.cil
+    echo "(typeattribute dufont_service_26_0)" >> /system/etc/selinux/mapping/26.0.cil
+    echo "(expandtypeattribute (theme_data_file_26_0) true)" >> /system/etc/selinux/mapping/26.0.cil
+    echo "(typeattribute theme_data_file_26_0)" >> /system/etc/selinux/mapping/26.0.cil
+    echo "(expandtypeattribute (theme_prop_26_0) true)" >> /system/etc/selinux/mapping/26.0.cil
+    echo "(typeattribute theme_prop_26_0)" >> /system/etc/selinux/mapping/26.0.cil
+
     # Remove duplicated type definitions
     sed -i "/(type bfmr_device)/d;/(roletype object_r bfmr_device)/d" /system/etc/selinux/plat_sepolicy.cil
     sed -i "/(type check_root_prop)/d;/(roletype object_r check_root_prop)/d" /system/etc/selinux/plat_sepolicy.cil
@@ -54,6 +62,7 @@ if [ "$(grep ro.build.version.release /vendor/build.prop)" = "ro.build.version.r
     sed -i "/(type thirdmodem_block_device)/d;/(roletype object_r thirdmodem_block_device)/d" /system/etc/selinux/plat_sepolicy.cil
     sed -i "/(type thirdmodemnvmbkp_block_device)/d;/(roletype object_r thirdmodemnvmbkp_block_device)/d" /system/etc/selinux/plat_sepolicy.cil
     sed -i "/(type thirdmodemnvm_block_device)/d;/(roletype object_r thirdmodemnvm_block_device)/d" /system/etc/selinux/plat_sepolicy.cil
+    sed -i "/(type theme_data_file)/d;/(roletype object_r theme_data_file)/d" /system/etc/selinux/plat_sepolicy.cil
 
     # Remove duplicated labels (bfm)
     sed -i "/\/dev\/hw_bfm/d" /system/etc/selinux/plat_file_contexts
