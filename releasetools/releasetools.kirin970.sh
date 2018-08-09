@@ -91,7 +91,7 @@ if [ "$(grep ro.build.version.release /vendor/build.prop)" = "ro.build.version.r
     sed -i "/\/dev\/dsm/d" /system/etc/selinux/plat_file_contexts
 
     # Remove duplicated labels (HiSEE)
-    sed -i "/\/hisee_fs(\/.*)?/d" /system/etc/selinux/plat_file_contexts
+    #sed -i "/\/hisee_fs(\/.*)?/d" /system/etc/selinux/plat_file_contexts
 
     # Remove duplicated labels (HWLog)
     sed -i "/\/dev\/hwlog_jank/d" /system/etc/selinux/plat_file_contexts
@@ -102,26 +102,26 @@ if [ "$(grep ro.build.version.release /vendor/build.prop)" = "ro.build.version.r
     sed -i "/\/dev\/ttyAMA0/d" /system/etc/selinux/plat_file_contexts
 
     # Remove duplicated labels (Logging (yes dumb...))
-    sed -i "/\/data\/log(\/.*)?/d" /system/etc/selinux/plat_file_contexts
-    sed -i "/\/data\/log\/gps(\/.*)?/d" /system/etc/selinux/plat_file_contexts
-    sed -i "/\/data\/log\/wifi(\/.*)?/d" /system/etc/selinux/plat_file_contexts
-    sed -i "/\/data\/hwzd_logs(\/.*)?/d" /system/etc/selinux/plat_file_contexts
-    sed -i "/\/data\/hisi_logs(\/.*)?/d" /system/etc/selinux/plat_file_contexts
-    sed -i "/\/data\/log\/hi110x(\/.*)?/d" /system/etc/selinux/plat_file_contexts
-    sed -i "/\/data\/perf_data_hs.data/d" /system/etc/selinux/plat_file_contexts
-    sed -i "/\/data\/android_logs(\/.*)?/d" /system/etc/selinux/plat_file_contexts
-    sed -i "/\/data\/log\/fingerprint(\/.*)?/d" /system/etc/selinux/plat_file_contexts
+    #sed -i "/\/data\/log(\/.*)?/d" /system/etc/selinux/plat_file_contexts
+    #sed -i "/\/data\/log\/gps(\/.*)?/d" /system/etc/selinux/plat_file_contexts
+    #sed -i "/\/data\/log\/wifi(\/.*)?/d" /system/etc/selinux/plat_file_contexts
+    #sed -i "/\/data\/hwzd_logs(\/.*)?/d" /system/etc/selinux/plat_file_contexts
+    #sed -i "/\/data\/hisi_logs(\/.*)?/d" /system/etc/selinux/plat_file_contexts
+    #sed -i "/\/data\/log\/hi110x(\/.*)?/d" /system/etc/selinux/plat_file_contexts
+    #sed -i "/\/data\/perf_data_hs.data/d" /system/etc/selinux/plat_file_contexts
+    #sed -i "/\/data\/android_logs(\/.*)?/d" /system/etc/selinux/plat_file_contexts
+    #sed -i "/\/data\/log\/fingerprint(\/.*)?/d" /system/etc/selinux/plat_file_contexts
 
     # Remove duplicated labels (pmom)
     sed -i "/\/dev\/pmom/d" /system/etc/selinux/plat_file_contexts
 
     # Remove duplicated labels (Secure storage)
-    sed -i "/\/sec_storage(\/.*)?/d" /system/etc/selinux/plat_file_contexts
-    sed -i "/\/data\/sec_storage_data(\/.*)?/d" /system/etc/selinux/plat_file_contexts
-    sed -i "/\/data\/sec_storage_data_users(\/.*)?/d" /system/etc/selinux/plat_file_contexts
+    #sed -i "/\/sec_storage(\/.*)?/d" /system/etc/selinux/plat_file_contexts
+    #sed -i "/\/data\/sec_storage_data(\/.*)?/d" /system/etc/selinux/plat_file_contexts
+    #sed -i "/\/data\/sec_storage_data_users(\/.*)?/d" /system/etc/selinux/plat_file_contexts
 
     # Remove duplicated labels (Splash2)
-    sed -i "/\/splash2(\/.*)?/d" /system/etc/selinux/plat_file_contexts
+    #sed -i "/\/splash2(\/.*)?/d" /system/etc/selinux/plat_file_contexts
 
     # Remove duplicated properties
     sed -i "/huawei.check.root./d" /system/etc/selinux/plat_property_contexts
