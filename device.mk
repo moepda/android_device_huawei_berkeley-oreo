@@ -92,6 +92,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libshims_hisupl
 
+# Selinux
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/sepolicy/27.0.cil:$(TARGET_COPY_OUT_SYSTEM)/etc/selinux/mapping/27.0.cil
+
 # VNDK
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vndk-compat/ld.config.compat.txt:system/etc/ld.config.compat.txt \
