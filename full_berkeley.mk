@@ -28,7 +28,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/treble_common.mk)
 $(call inherit-product, device/huawei/berkeley/device.mk)
 
 # Inherit from berkeley vendor
-$(call inherit-product, vendor/huawei/berkeley/berkeley-vendor.mk)
+$(call inherit-product, vendor/huawei/kirin970-common/kirin970-common-vendor.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := berkeley
